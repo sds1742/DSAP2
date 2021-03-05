@@ -69,7 +69,7 @@ void Priority::processNextEvent()
 {
 	if (pq.top().type == 0) {
 		for (int i = 0; i < inputvec.size(); i++) {
-			if (fabs(pq.top().data - inputvec.at(i).arrivalTime) < FLT_EPSILON) {
+			if (fabs(pq.top().data == inputvec.at(i).arrivalTime)) {
 				inputcus = inputvec.at(i);
 				//simple linear search to find the customer corresponding to the arrival
 			}
